@@ -1,19 +1,11 @@
-import { Navigation } from "./routes/Navigation";
+import { Navigation } from './routes/Navigation';
 
-
-// import viteLogo from "/vite.svg";
-
-
-export default function App() {
-
+function App() {
   return (
     <>
-      <h1>App</h1>
-      <hr />
-
-    <Navigation />
-
+      <Navigation />
     </>
   );
 }
 
+export default App;
