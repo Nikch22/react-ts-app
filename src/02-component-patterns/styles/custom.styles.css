@@ -21,3 +21,9 @@
   color: whitesmoke;
   border-color: cornsilk
 }
+
+.shopping-cart {
+  position: fixed;
+  right: 10px;
+  top: 0px;
+}

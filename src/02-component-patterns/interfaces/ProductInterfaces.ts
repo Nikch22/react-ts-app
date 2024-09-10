@@ -10,3 +10,12 @@ export interface ProductContextProps {
   increaseOrDecreaseCounterBy: (step:number) => void;
   product:Product;
 }
+
+export interface OnChangeArgs {
+  product: Product,
+  count: number
+}
+
+export interface ProductInCart extends Product {
+  count: number;
+}

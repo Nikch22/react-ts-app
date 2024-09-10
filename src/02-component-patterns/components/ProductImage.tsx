@@ -10,9 +10,10 @@ interface Props {
   style?: CSSProperties;
 }
 
-export const ProductImage = ( { img = '', className, style }: Props ) => {
+export const ProductImage = ( { img, className, style }: Props ) => {
 
   const { product } = useContext( ProductContext );
+
   let imgToShow:string;
 
   if ( img ) {
@@ -26,9 +27,9 @@ export const ProductImage = ( { img = '', className, style }: Props ) => {
 
   return (
     <img 
+      src={ imgToShow } 
       style={ style }
       className={ `${ styles.productImg } ${ className }` } 
-      src={ imgToShow } 
       alt="Product Image" 
     />
   )
