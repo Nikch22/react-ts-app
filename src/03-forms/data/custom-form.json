@@ -1,0 +1,116 @@
+[
+  {
+    "type": "input",
+    "name": "firstName",
+    "placeholder": "Romeo",
+    "label": "Nombre",
+    "value": "",
+    "validations": [
+      {
+        "type":"required",
+        "msg":"El nombre es obligatorio"
+      },
+      {
+        "type":"minLength",
+        "value":2,
+        "msg":"El nombre debe tener mínimo 2 letras o más"
+      },
+      {
+        "type":"maxLength",
+        "value":16,
+        "msg":"El nombre debe tener 16 letras o menos"
+      }
+    ]
+  },
+
+  {
+    "type": "email",
+    "name": "email",
+    "placeholder": "hey@mail.com",
+    "label": "Email",
+    "value": "",
+    "validations": [
+      {
+        "type":"required",
+        "msg":"El email es obligatorio"
+      },
+      {
+        "type":"email",
+        "msg":"El email no es válido"
+      }
+    ]
+  },
+
+  {
+    "type": "password",
+    "name": "password1",
+    "placeholder": "******",
+    "label": "Contraseña",
+    "value": "",
+    "validations": [
+      {
+        "type":"required",
+        "msg":"La contraseña es obligatoria"
+      },
+      {
+        "type":"minLength",
+        "value":6,
+        "msg":"La contraseña debe tener 6 caracteres o más"
+      }
+    ]
+  },
+
+  {
+    "type": "password",
+    "name": "password2",
+    "placeholder": "Repita la Contraseña",
+    "label": "Confirmar Contraseña",
+    "value": "",
+    "validations": [
+      {
+        "type":"required",
+        "msg":"La confirmación de contraseña es obligatoria"
+      },
+      {
+        "type":"oneOf",
+        "ref": "password1",
+        "msg":"Las contraseñas no coinciden"
+      }
+    ]
+  },
+
+  {
+    "type": "select",
+    "name": "favoriteGame",
+    "label": "Favorite Game",
+    "value": "",
+    "options": [
+      {
+        "id":1,
+        "value":"metal-gear",
+        "label":"Metal Gear"
+      },
+      {
+        "id":2,
+        "value":"dark-souls",
+        "label":"Dark Souls"
+      },
+      {
+        "id":3,
+        "value":"zelda",
+        "label":"Zelda"
+      },
+      {
+        "id":4,
+        "value":"naruto-storm",
+        "label":"Naruto Storm"
+      }
+    ],
+    "validations": [
+      {
+        "type": "required",
+        "msg": "Seleccionar un juego es obligatorio"
+      }
+    ]
+  }
+]
